@@ -1,12 +1,9 @@
-import React, { FC } from 'react';
-import { Button } from 'antd';
+import React, { useState } from 'react';
+import { Button, Input, Divider } from 'antd';
 import './index.less';
 
-interface IIndexProps {
-  history: any;
-}
 
-const IndexPage: FC<IIndexProps> = ({ history }) => {
+const IndexPage = ({ history }) => {
   return (
     <div className='index_style'>
       <p>this is index</p>
@@ -15,6 +12,12 @@ const IndexPage: FC<IIndexProps> = ({ history }) => {
           pathname: '/home'
         });
       }}>go to Home</Button>
+      <Divider />
+      <div className='login_style'>
+        <Input />
+        <Input />
+        <Input />
+      </div>
     </div>
   )
 }

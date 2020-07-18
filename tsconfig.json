@@ -29,7 +29,7 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "allowJs": true,
     "strict": true,
     "skipLibCheck": true,
