@@ -4,10 +4,17 @@ import './index.css';
 import Router from './router';
 import * as serviceWorker from './serviceWorker';
 
+import { Provider } from 'react-redux';
+import Reducer from './models/reducer';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+
+const store = createStore(Reducer, applyMiddleware(thunkMiddleware));
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <Router />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
